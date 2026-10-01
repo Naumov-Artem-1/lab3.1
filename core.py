@@ -69,4 +69,8 @@ class Container:
                 result.append(circle)
         return result
 
-
+    def remove_selected(self):
+        to_remove = self.selected()
+        for circle in to_remove:
+            self._items.remove(circle)
+        return len(to_remove)
